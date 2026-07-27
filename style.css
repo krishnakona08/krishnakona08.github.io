@@ -134,27 +134,44 @@ nav ul li a:hover{
 
 .hero{
 
-    min-height:100vh;
+    position:relative;
 
-    display:grid;
+    min-height:92vh;
 
-    grid-template-columns:1.05fr .95fr;
+    display:flex;
 
     align-items:center;
 
-    gap:70px;
+    padding:150px 7%;
 
-    padding:150px 8% 90px;
+    overflow:hidden;
 
-    position:relative;
+    border-radius:30px;
+
+    margin:20px;
+
+    background:url("assets/images/profile.png");
+
+    background-size:90%;
+
+    background-position:right center;
+
+    background-repeat:no-repeat;
+    background-color: #F3F4F6;
 
 }
 
 .hero-text{
 
-    width:100%;
+    position:relative;
 
-    max-width:650px;
+    z-index:5;
+
+    max-width:620px;
+
+    margin-left:35px;
+
+    padding-left:00px;
 
 }
 
@@ -169,9 +186,11 @@ nav ul li a:hover{
 
 .hero-text h1{
 
-    font-size:80px;
+    font-size:72px;
 
-    line-height:1.05;
+    line-height:0.95;
+
+    letter-spacing:-2px;
 
     margin-bottom:18px;
 
@@ -181,11 +200,11 @@ nav ul li a:hover{
 
 .hero-text h2{
 
-    font-size:34px;
+    font-size:28px;
 
     line-height:1.45;
 
-    margin-bottom:25px;
+    max-width:620px;
 
     color:var(--secondary);
 
@@ -193,13 +212,13 @@ nav ul li a:hover{
 
 .description{
 
-    font-size:20px;
+    font-size:16px;
 
-    line-height:1.9;
+    line-height:1.8;
 
     color:var(--secondary);
 
-    max-width:600px;
+    max-width:560px;
 
 }
 
@@ -278,33 +297,7 @@ nav ul li a:hover{
    PROFILE IMAGE
 ========================== */
 
-.hero-image{
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-end;
-
-    width:100%;
-
-}
-
-.hero-image img{
-
-    width:100%;
-
-    max-width:620px;
-
-    height:auto;
-
-    object-fit:contain;
-
-    filter:drop-shadow(0 40px 55px rgba(0,0,0,.18));
-
-    transition:.45s;
-
-}
 
 .hero-image img:hover{
 
@@ -1232,31 +1225,7 @@ footer p{
 
 }
 
-.hero::before{
 
-    content:"";
-
-    position:absolute;
-
-    width:420px;
-
-    height:420px;
-
-    background:#8B5CF6;
-
-    border-radius:50%;
-
-    filter:blur(180px);
-
-    opacity:.10;
-
-    right:-120px;
-
-    top:-100px;
-
-    z-index:-1;
-
-}
 body::before{
 
     content:"";
@@ -1376,4 +1345,20 @@ body::before{
 
 }
 
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,.98) 0%,
+        rgba(255,255,255,.95) 28%,
+        rgba(255,255,255,.80) 42%,
+        rgba(255,255,255,.35) 56%,
+        rgba(255,255,255,0) 68%
+    );
+
+    z-index:1;
 }
